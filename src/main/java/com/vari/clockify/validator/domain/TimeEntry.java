@@ -1,13 +1,11 @@
 package com.vari.clockify.validator.domain;
 
-import java.time.Duration;
-import java.time.OffsetDateTime;
-import java.util.List;
-
 import com.google.cloud.firestore.annotation.DocumentId;
 import com.google.cloud.firestore.annotation.IgnoreExtraProperties;
 import com.google.cloud.spring.data.firestore.Document;
-
+import java.time.Duration;
+import java.time.OffsetDateTime;
+import java.util.List;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

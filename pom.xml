@@ -16,6 +16,8 @@
 	<properties>
 		<java.version>11</java.version>
 		<testcontainers.version>1.15.3</testcontainers.version>
+		<formatter-maven-plugin.version>2.16.0</formatter-maven-plugin.version>
+		<impsort-maven-plugin.version>1.6.2</impsort-maven-plugin.version>
 	</properties>
 
 	<dependencyManagement>
@@ -103,6 +105,19 @@
 						</exclude>
 					</excludes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.revelc.code.formatter</groupId>
+				<artifactId>formatter-maven-plugin</artifactId>
+				<version>${formatter-maven-plugin.version}</version>
+				<configuration>
+					<lineEnding>LF</lineEnding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.revelc.code</groupId>
+				<artifactId>impsort-maven-plugin</artifactId>
+				<version>${impsort-maven-plugin.version}</version>
 			</plugin>
 		</plugins>
 	</build>

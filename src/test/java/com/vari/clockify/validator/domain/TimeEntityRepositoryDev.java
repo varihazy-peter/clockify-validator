@@ -3,11 +3,18 @@ package com.vari.clockify.validator.domain;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.MapType;
+import com.fasterxml.jackson.databind.type.TypeFactory;
+import com.google.cloud.firestore.DocumentSnapshot;
+import com.google.cloud.firestore.Firestore;
+import com.vari.clockify.validator.AbstractInterationTest;
+import io.vavr.control.Try;
 import java.time.Duration;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
-
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
@@ -15,16 +22,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.Resource;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.type.MapType;
-import com.fasterxml.jackson.databind.type.TypeFactory;
-import com.google.cloud.firestore.DocumentSnapshot;
-import com.google.cloud.firestore.Firestore;
-import com.vari.clockify.validator.AbstractInterationTest;
-
-import io.vavr.control.Try;
-import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @SpringBootTest
@@ -47,8 +44,7 @@ class TimeEntityRepositoryDev extends AbstractInterationTest {
 
     Map<String, Object> map() {
         return Try.withResources(timeEntryJson::getInputStream)
-                .of(objectMapper.readerFor(type)::<Map<String, Object>>readValue)
-                .get();
+                .of(objectMapper.readerFor(type)::<Map<String, Object>> readValue).get();
     }
 
     @Test
