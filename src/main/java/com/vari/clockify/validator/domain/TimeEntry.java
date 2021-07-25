@@ -1,11 +1,15 @@
 package com.vari.clockify.validator.domain;
 
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Optional;
+
 import com.google.cloud.firestore.annotation.DocumentId;
 import com.google.cloud.firestore.annotation.IgnoreExtraProperties;
 import com.google.cloud.spring.data.firestore.Document;
-import java.time.Duration;
-import java.time.OffsetDateTime;
-import java.util.List;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -70,4 +74,20 @@ public class TimeEntry {
         Boolean archived;
     }
 
+    Task task;
+
+    @Data
+    @Builder
+    @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = false)
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class Task {
+        String id, name, projectId, workspaceId;
+        Boolean billable;
+    }
+
+    String validated;
+    public LocalDate startDate() {
+        return Optional.ofNullable(this.timeInterval).map(TimeInterval::start).map(LocalDate::from).orElseThrow();
+    }
 }
