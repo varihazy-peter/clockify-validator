@@ -21,7 +21,8 @@ import org.testcontainers.utility.DockerImageName;
 public abstract class AbstractInterationTest {
     @Container
     static final FirestoreEmulatorContainer firestoreEmulator = new FirestoreEmulatorContainer(
-            DockerImageName.parse("gcr.io/google.com/cloudsdktool/cloud-sdk:317.0.0-emulators"));
+            DockerImageName.parse("gcr.io/google.com/cloudsdktool/cloud-sdk:317.0.0-emulators"))
+    .waitingFor(null);
 
     @DynamicPropertySource
     public static void emulatorProperties(DynamicPropertyRegistry registry) {

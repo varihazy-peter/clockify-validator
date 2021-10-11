@@ -34,13 +34,12 @@ class DaySummarizer {
         TimeEntry.TimeInterval timeInterval = timeEntry.getTimeInterval();
         if (timeInterval == null) {
             log.warn("TimeEntry without timeInterval {}", timeEntry);
+            return null;
         }
         Duration duration = timeInterval.duration();
-        if (!Duration.between(timeInterval.start(),timeInterval.end()).equals(duration)) {
-            throw new RuntimeException();
-        }
         if (duration == null) {
             log.warn("TimeEntry without timeInterval.duration {}", timeEntry);
+            return null;
         }
         return duration;
     }

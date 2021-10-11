@@ -25,8 +25,4 @@ public class ClockifyConfpr {
         String id;
         String name;
     }
-
-    public Set<String> tagIds() {
-        return this.tags.stream().map(Tag::getId).collect(Collectors.toUnmodifiableSet());
-    }
 }

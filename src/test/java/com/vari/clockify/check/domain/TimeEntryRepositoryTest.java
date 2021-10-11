@@ -11,25 +11,19 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.Resource;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.MapType;
 import com.fasterxml.jackson.databind.type.TypeFactory;
-import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.firestore.DocumentSnapshot;
 import com.google.cloud.firestore.Firestore;
-import com.google.cloud.firestore.FirestoreOptions;
 import com.vari.clockify.check.AbstractInterationTest;
 import com.vari.clockify.check.domain.document.TimeEntry;
 import com.vari.clockify.check.domain.repository.TimeEntryRepository;
 
 import io.vavr.control.Try;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
-@SpringBootTest
 class TimeEntryRepositoryTest extends AbstractInterationTest {
     @Autowired
     Firestore firestore;

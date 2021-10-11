@@ -1,6 +1,7 @@
 package com.vari.clockify.check.domain;
 
 import java.time.LocalDate;
+import java.util.Objects;
 import java.util.Set;
 
 import com.vari.clockify.check.domain.document.TimeEntry;
@@ -30,7 +31,7 @@ public class UserIdDate {
     public static Set<UserIdDate> effected(TimeEntry timeEntry) {
         UserIdDate userIdDate = from(timeEntry);
         UserIdDate daySummaryDate = daySummaryDate(timeEntry);
-        return daySummaryDate == null ? Set.of(userIdDate) : Set.of(userIdDate, daySummaryDate);
+        return daySummaryDate == null || Objects.equals(userIdDate, daySummaryDate) ? Set.of(userIdDate) : Set.of(userIdDate, daySummaryDate);
     }
 
     public String toString() {

@@ -34,13 +34,7 @@ class TimeEntryDaySummaryDAO {
 
     Optional<TimeEntry> firstNotValidated() {
         log.debug("firstNotValidatedUserIdDates");
-        List<TimeEntry> timeEntries = this.timeEntryRepository.findByValidationDataValidatedAtIsNull(pageable)
-                .collectList()
-                .block();
-        if (timeEntries == null || timeEntries.isEmpty()) {
-            return Optional.empty();
-        }
-        return Optional.of(timeEntries.get(0));
+        return this.timeEntryRepository.findByValidationDataValidatedAtIsNull(pageable).toStream().findFirst();
     }
 
     List<TimeEntry> findTimeEntries(@NonNull UserIdDate userIdDate) {

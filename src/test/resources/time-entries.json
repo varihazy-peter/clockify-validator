@@ -30,10 +30,10 @@
 		},
 		"validationData": {
 			"receivedAt": "2021-10-08T07:18:14.533624Z",
-			"validatedAt": "2021-10-09T12:13:48.112730Z",
+			"validatedAt": null,
 			"constraintViolationMessages": null,
 			"date": "2021-10-08",
-			"daySummaryDate": "2021-10-08"
+			"daySummaryDate": "2021-10-07"
 		}
 	},
 	{
@@ -155,16 +155,11 @@
 		"userId": "5f9ed7381b69c27d1628360b",
 		"workspaceId": "5f9ecf053a1dc508bbb0caa9",
 		"billable": true,
-		"timeInterval": {
-			"duration": "PT1H33M24S",
-			"start": "2021-10-08T11:00:12Z",
-			"end": "2021-10-08T12:33:36Z"
-		},
 		"isLocked": false,
 		"tags": [
 			{
-				"id": "5fa02d96bc67ab6d1e88e741",
-				"name": "Call / Meeting",
+				"id": "fake",
+				"name": "fake",
 				"workspaceId": "5f9ecf053a1dc508bbb0caa9",
 				"archived": false
 			}
@@ -192,11 +187,7 @@
 		"userId": "5f9ed7381b69c27d1628360b",
 		"workspaceId": "5f9ecf053a1dc508bbb0caa9",
 		"billable": true,
-		"timeInterval": {
-			"duration": "PT20M58S",
-			"start": "2021-10-08T12:33:40Z",
-			"end": "2021-10-08T12:54:38Z"
-		},
+		"timeInterval": null,
 		"isLocked": false,
 		"tags": [
 			{
@@ -241,6 +232,12 @@
 				"name": "Development",
 				"workspaceId": "5f9ecf053a1dc508bbb0caa9",
 				"archived": false
+			},
+			{
+				"id": "5fa02d96bc67ab6d1e88e741",
+				"name": "Call / Meeting",
+				"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+				"archived": false
 			}
 		],
 		"task": {
@@ -267,9 +264,9 @@
 		"workspaceId": "5f9ecf053a1dc508bbb0caa9",
 		"billable": true,
 		"timeInterval": {
-			"duration": "PT18M8S",
+			"duration": null,
 			"start": "2021-10-08T13:41:47Z",
-			"end": "2021-10-08T13:59:55Z"
+			"end": null
 		},
 		"isLocked": false,
 		"tags": [

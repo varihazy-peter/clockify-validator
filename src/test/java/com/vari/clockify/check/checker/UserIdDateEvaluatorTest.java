@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
@@ -31,9 +32,6 @@ import com.vari.clockify.check.confpr.ClockifyConfpr;
 import com.vari.clockify.check.domain.UserIdDate;
 import com.vari.clockify.check.domain.document.TimeEntry;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @SpringBootTest(classes = { UserIdDateEvaluatorTest.CheckerConfig.class })
 class UserIdDateEvaluatorTest {
 
@@ -46,10 +44,19 @@ class UserIdDateEvaluatorTest {
 
     @Autowired
     UserIdDateEvaluator userIdDateEvaluator;
+    @Autowired
+    ClockifyChecker clockifyChecker;
     @MockBean
     TimeEntryDaySummaryDAO dao;
     UserIdDate userIdDate = new UserIdDate("5f9ed7381b69c27d1628360b", LocalDate.of(2021, 10, 8));
-    Set<String> timeEntryIs = Set.of("6160239d0908333f1c152a64", "61604a9b7002f4130da635ae", "61603aa490029368f0653d2b", "616024bc0908333f1c153b63", "615ff0ca0759435f6bfca2a3", "61603f901bdc8418c2ca8ed1", "615ff07d7002f4130d9f71a2", "615ff0b890029368f0605e15");
+    Set<String> timeEntryIs = Set.of("6160239d0908333f1c152a64",
+            "61604a9b7002f4130da635ae",
+            "61603aa490029368f0653d2b",
+            "616024bc0908333f1c153b63",
+            "615ff0ca0759435f6bfca2a3",
+            "61603f901bdc8418c2ca8ed1",
+            "615ff07d7002f4130d9f71a2",
+            "615ff0b890029368f0605e15");
     List<TimeEntry> timeEntries;
 
     @BeforeEach
@@ -58,18 +65,39 @@ class UserIdDateEvaluatorTest {
         timeEntries = objectMapper.readerForListOf(TimeEntry.class).readValue(json);
 
         Mockito.when(dao.firstNotValidated()).thenReturn(timeEntries.stream().findFirst()).thenReturn(Optional.empty());
-        Mockito.when(dao.findTimeEntries(eq(userIdDate))).thenReturn(timeEntries);
         Mockito.when(dao.saveDaySummary(any())).thenAnswer(a -> a.getArgument(0));
         Mockito.when(dao.saveTimeEntries(any())).thenAnswer(a -> a.getArgument(0));
     }
 
     @Test
     void test() throws JsonProcessingException {
+        Mockito.when(dao.findTimeEntries(eq(userIdDate))).thenReturn(timeEntries);
+        Mockito.when(dao.firstNotValidated()).thenReturn(Optional.of(timeEntries.get(0))).thenReturn(Optional.empty());
+        Map<UserIdDate, UserIdDateEvaluation> done = clockifyChecker.checkAll();
+        assertThat(done).isNotNull()
+                .hasSize(2)
+                .containsKeys(userIdDate, new UserIdDate("5f9ed7381b69c27d1628360b", LocalDate.of(2021, 10, 7)));
+        UserIdDateEvaluation userIdDateEvaluation = done.get(userIdDate);
+        assertThat(userIdDateEvaluation).isNotNull();
+        assertThat(userIdDateEvaluation.getUserIdDate()).isEqualTo(this.userIdDate);
+        assertThat(Duration.parse(userIdDateEvaluation.getDuration()))
+                .isEqualTo(Duration.ZERO.plusHours(5).plusMinutes(25).plusSeconds(2));
+        assertThat(userIdDateEvaluation.getTimeEntryIds()).containsExactlyInAnyOrderElementsOf(timeEntryIs);
+        assertThat(userIdDateEvaluation.getValidatedAt()).isNotNull();
+        assertThat(userIdDateEvaluation.getViolations()).isNotNull();
+        assertThat(userIdDateEvaluation.getViolations()).containsKeys("616024bc0908333f1c153b63",
+                "61603f901bdc8418c2ca8ed1");
+    }
+
+    @Test
+    void testEmptyList() throws JsonProcessingException {
+        Mockito.when(dao.findTimeEntries(eq(userIdDate))).thenReturn(List.of());
         UserIdDateEvaluation userIdDateEvaluation = userIdDateEvaluator.check(userIdDate);
         assertThat(userIdDateEvaluation).isNotNull();
         assertThat(userIdDateEvaluation.getUserIdDate()).isEqualTo(this.userIdDate);
-        assertThat(Duration.parse(userIdDateEvaluation.getDuration())).isEqualTo(Duration.ZERO.plusHours(7).plusMinutes(37).plusSeconds(32));
-        assertThat(userIdDateEvaluation.getTimeEntryIds()).containsExactlyInAnyOrderElementsOf(timeEntryIs);
+        assertThat(userIdDateEvaluation.getDuration()).isNull();
+        assertThat(userIdDateEvaluation.getTimeEntryIds()).isEmpty();
+        ;
         assertThat(userIdDateEvaluation.getValidatedAt()).isNotNull();
         assertThat(userIdDateEvaluation.getViolations()).isNotNull();
     }
