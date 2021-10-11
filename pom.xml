@@ -17,6 +17,8 @@
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud-gcp.version>2.0.4</spring-cloud-gcp.version>
+		<spring-cloud.version>2020.0.4</spring-cloud.version>
+		<spring-native.version>0.10.4</spring-native.version>
 		<testcontainers.version>1.16.0</testcontainers.version>
 		<formatter-maven-plugin.version>2.16.0</formatter-maven-plugin.version>
 		<impsort-maven-plugin.version>1.6.2</impsort-maven-plugin.version>
@@ -127,5 +129,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
