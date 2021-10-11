@@ -1,0 +1,38 @@
+clockify:
+  tags:
+  - id: 5fc612ad0833682c273f5f21
+    name: Project administration
+  - id: 5fb7b5fd086bdf5591cc3c8b
+    name: Design
+  - id: 5fc612b70120537e18b78d61
+    name: Mentoring / Onboarding
+  - id: 5fc60e500120537e18b7479d
+    name: QA
+  - id: 5fc611180833682c273f34b9
+    name: Reporting
+  - id: 5fa02e0967cee745ea72920a
+    name: Learning
+  - id: 5fa02e0167cee745ea7291ae
+    name: Research
+  - id: 5fb7b5c9086bdf5591cc31a6
+    name: Sales
+  - id: 5fc8a82a0330060250374371
+    name: Code review
+  - id: 5fb7b613086bdf5591cc40cb
+    name: Development
+  - id: 5fc6111c0833682c273f3519
+    name: Documentation
+  - id: 5fc743db3a7cf100cb68ad8a
+    name: Account management
+  - id: 5fb7b5d6086bdf5591cc3494
+    name: Support
+  - id: 5fa02d96bc67ab6d1e88e741
+    name: Call / Meeting
+  - id: 5fa02bba02f38d2ce6750060
+    name: Hellotax Support - CS
+  - id: 5fa943b4d7e28b6cc6542d5a
+    name: Hellotax Support - Filing
+  - id: 5fa02bed02f38d2ce67502c8
+    name: Hellotax Support - OP
+  - id: 5fb7b64d086bdf5591cc4c1d
+    name: Planning

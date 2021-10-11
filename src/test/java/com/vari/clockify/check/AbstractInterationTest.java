@@ -1,4 +1,4 @@
-package com.vari.clockify.validator;
+package com.vari.clockify.check;
 
 import com.google.api.gax.core.CredentialsProvider;
 import com.google.api.gax.core.NoCredentialsProvider;

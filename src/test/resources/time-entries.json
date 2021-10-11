@@ -1,0 +1,298 @@
+[
+	{
+		"documentId": "615ff07d7002f4130d9f71a2",
+		"id": "615ff07d7002f4130d9f71a2",
+		"description": "Daily",
+		"projectId": "60c86177c5486363c217acea",
+		"userId": "5f9ed7381b69c27d1628360b",
+		"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+		"billable": true,
+		"timeInterval": {
+			"duration": "PT7M",
+			"start": "2021-10-08T07:00:00Z",
+			"end": "2021-10-08T07:07:00Z"
+		},
+		"isLocked": false,
+		"tags": [
+			{
+				"id": "5fa02d96bc67ab6d1e88e741",
+				"name": "Call / Meeting",
+				"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+				"archived": false
+			}
+		],
+		"task": {
+			"id": "60c8623a9d487661d746cad7",
+			"name": "- No related Jira issue",
+			"projectId": "60c86177c5486363c217acea",
+			"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+			"billable": true
+		},
+		"validationData": {
+			"receivedAt": "2021-10-08T07:18:14.533624Z",
+			"validatedAt": "2021-10-09T12:13:48.112730Z",
+			"constraintViolationMessages": null,
+			"date": "2021-10-08",
+			"daySummaryDate": "2021-10-08"
+		}
+	},
+	{
+		"documentId": "615ff0b890029368f0605e15",
+		"id": "615ff0b890029368f0605e15",
+		"description": "pem2",
+		"projectId": "60c86177c5486363c217acea",
+		"userId": "5f9ed7381b69c27d1628360b",
+		"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+		"billable": true,
+		"timeInterval": {
+			"duration": "PT1H25M",
+			"start": "2021-10-08T05:35:00Z",
+			"end": "2021-10-08T07:00:00Z"
+		},
+		"isLocked": false,
+		"tags": [
+			{
+				"id": "5fb7b613086bdf5591cc40cb",
+				"name": "Development",
+				"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+				"archived": false
+			}
+		],
+		"task": {
+			"id": "60c8623a9d487661d746cad7",
+			"name": "- No related Jira issue",
+			"projectId": "60c86177c5486363c217acea",
+			"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+			"billable": true
+		},
+		"validationData": {
+			"receivedAt": "2021-10-08T07:18:33.545996Z",
+			"validatedAt": "2021-10-09T12:13:48.112730Z",
+			"constraintViolationMessages": null,
+			"date": "2021-10-08",
+			"daySummaryDate": "2021-10-08"
+		}
+	},
+	{
+		"documentId": "615ff0ca0759435f6bfca2a3",
+		"id": "615ff0ca0759435f6bfca2a3",
+		"description": "pem2, pem4, megszemélyesítő",
+		"projectId": "60c86177c5486363c217acea",
+		"userId": "5f9ed7381b69c27d1628360b",
+		"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+		"billable": true,
+		"timeInterval": {
+			"duration": "PT3H1M26S",
+			"start": "2021-10-08T07:18:34Z",
+			"end": "2021-10-08T10:20:00Z"
+		},
+		"isLocked": false,
+		"tags": [
+			{
+				"id": "5fb7b613086bdf5591cc40cb",
+				"name": "Development",
+				"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+				"archived": false
+			}
+		],
+		"task": {
+			"id": "60c8623a9d487661d746cad7",
+			"name": "- No related Jira issue",
+			"projectId": "60c86177c5486363c217acea",
+			"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+			"billable": true
+		},
+		"validationData": {
+			"receivedAt": "2021-10-08T10:55:24.311599Z",
+			"validatedAt": "2021-10-09T12:13:48.112730Z",
+			"constraintViolationMessages": null,
+			"date": "2021-10-08",
+			"daySummaryDate": "2021-10-08"
+		}
+	},
+	{
+		"documentId": "6160239d0908333f1c152a64",
+		"id": "6160239d0908333f1c152a64",
+		"description": "pem4",
+		"projectId": "60c86177c5486363c217acea",
+		"userId": "5f9ed7381b69c27d1628360b",
+		"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+		"billable": true,
+		"timeInterval": {
+			"duration": "PT4M44S",
+			"start": "2021-10-08T10:55:24Z",
+			"end": "2021-10-08T11:00:08Z"
+		},
+		"isLocked": false,
+		"tags": [
+			{
+				"id": "5fb7b613086bdf5591cc40cb",
+				"name": "Development",
+				"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+				"archived": false
+			}
+		],
+		"task": {
+			"id": "60c8623a9d487661d746cad7",
+			"name": "- No related Jira issue",
+			"projectId": "60c86177c5486363c217acea",
+			"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+			"billable": true
+		},
+		"validationData": {
+			"receivedAt": "2021-10-08T11:00:08.530045Z",
+			"validatedAt": "2021-10-09T12:13:48.112730Z",
+			"constraintViolationMessages": null,
+			"date": "2021-10-08",
+			"daySummaryDate": "2021-10-08"
+		}
+	},
+	{
+		"documentId": "616024bc0908333f1c153b63",
+		"id": "616024bc0908333f1c153b63",
+		"description": "LiveCode Meeting",
+		"projectId": "60c86177c5486363c217acea",
+		"userId": "5f9ed7381b69c27d1628360b",
+		"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+		"billable": true,
+		"timeInterval": {
+			"duration": "PT1H33M24S",
+			"start": "2021-10-08T11:00:12Z",
+			"end": "2021-10-08T12:33:36Z"
+		},
+		"isLocked": false,
+		"tags": [
+			{
+				"id": "5fa02d96bc67ab6d1e88e741",
+				"name": "Call / Meeting",
+				"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+				"archived": false
+			}
+		],
+		"task": {
+			"id": "60c8623a9d487661d746cad7",
+			"name": "- No related Jira issue",
+			"projectId": "60c86177c5486363c217acea",
+			"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+			"billable": true
+		},
+		"validationData": {
+			"receivedAt": "2021-10-08T12:33:40.012011Z",
+			"validatedAt": "2021-10-09T12:13:48.112730Z",
+			"constraintViolationMessages": null,
+			"date": "2021-10-08",
+			"daySummaryDate": "2021-10-08"
+		}
+	},
+	{
+		"documentId": "61603aa490029368f0653d2b",
+		"id": "61603aa490029368f0653d2b",
+		"description": "pem4",
+		"projectId": "60c86177c5486363c217acea",
+		"userId": "5f9ed7381b69c27d1628360b",
+		"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+		"billable": true,
+		"timeInterval": {
+			"duration": "PT20M58S",
+			"start": "2021-10-08T12:33:40Z",
+			"end": "2021-10-08T12:54:38Z"
+		},
+		"isLocked": false,
+		"tags": [
+			{
+				"id": "5fb7b613086bdf5591cc40cb",
+				"name": "Development",
+				"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+				"archived": false
+			}
+		],
+		"task": {
+			"id": "60c8623a9d487661d746cad7",
+			"name": "- No related Jira issue",
+			"projectId": "60c86177c5486363c217acea",
+			"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+			"billable": true
+		},
+		"validationData": {
+			"receivedAt": "2021-10-08T12:54:57.808623Z",
+			"validatedAt": "2021-10-09T12:13:48.112730Z",
+			"constraintViolationMessages": null,
+			"date": "2021-10-08",
+			"daySummaryDate": "2021-10-08"
+		}
+	},
+	{
+		"documentId": "61603f901bdc8418c2ca8ed1",
+		"id": "61603f901bdc8418c2ca8ed1",
+		"description": "pem4",
+		"projectId": "60c86177c5486363c217acea",
+		"userId": "5f9ed7381b69c27d1628360b",
+		"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+		"billable": true,
+		"timeInterval": {
+			"duration": "PT46M52S",
+			"start": "2021-10-08T12:54:39Z",
+			"end": "2021-10-08T13:41:31Z"
+		},
+		"isLocked": false,
+		"tags": [
+			{
+				"id": "5fb7b613086bdf5591cc40cb",
+				"name": "Development",
+				"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+				"archived": false
+			}
+		],
+		"task": {
+			"id": "60c8623a9d487661d746cad7",
+			"name": "- No related Jira issue",
+			"projectId": "60c86177c5486363c217acea",
+			"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+			"billable": true
+		},
+		"validationData": {
+			"receivedAt": "2021-10-08T13:41:31.474329Z",
+			"validatedAt": "2021-10-09T12:13:48.112730Z",
+			"constraintViolationMessages": null,
+			"date": "2021-10-08",
+			"daySummaryDate": "2021-10-08"
+		}
+	},
+	{
+		"documentId": "61604a9b7002f4130da635ae",
+		"id": "61604a9b7002f4130da635ae",
+		"description": "Deploy pem2",
+		"projectId": "60c86177c5486363c217acea",
+		"userId": "5f9ed7381b69c27d1628360b",
+		"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+		"billable": true,
+		"timeInterval": {
+			"duration": "PT18M8S",
+			"start": "2021-10-08T13:41:47Z",
+			"end": "2021-10-08T13:59:55Z"
+		},
+		"isLocked": false,
+		"tags": [
+			{
+				"id": "5fb7b613086bdf5591cc40cb",
+				"name": "Development",
+				"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+				"archived": false
+			}
+		],
+		"task": {
+			"id": "60c8623a9d487661d746cad7",
+			"name": "- No related Jira issue",
+			"projectId": "60c86177c5486363c217acea",
+			"workspaceId": "5f9ecf053a1dc508bbb0caa9",
+			"billable": true
+		},
+		"validationData": {
+			"receivedAt": "2021-10-08T13:59:55.591433Z",
+			"validatedAt": "2021-10-09T12:13:48.112730Z",
+			"constraintViolationMessages": null,
+			"date": "2021-10-08",
+			"daySummaryDate": "2021-10-08"
+		}
+	}
+]

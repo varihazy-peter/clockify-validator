@@ -1,4 +1,4 @@
-package com.vari.clockify.validator.domain;
+package com.vari.clockify.check.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -9,7 +9,6 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,14 +17,19 @@ import org.springframework.core.io.Resource;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.MapType;
 import com.fasterxml.jackson.databind.type.TypeFactory;
+import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.firestore.DocumentSnapshot;
 import com.google.cloud.firestore.Firestore;
-import com.vari.clockify.validator.AbstractInterationTest;
+import com.google.cloud.firestore.FirestoreOptions;
+import com.vari.clockify.check.AbstractInterationTest;
+import com.vari.clockify.check.domain.document.TimeEntry;
+import com.vari.clockify.check.domain.repository.TimeEntryRepository;
 
 import io.vavr.control.Try;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @SpringBootTest
-@EnabledIfEnvironmentVariable(named = "ENV", matches = "dev")
 class TimeEntryRepositoryTest extends AbstractInterationTest {
     @Autowired
     Firestore firestore;
@@ -44,7 +48,8 @@ class TimeEntryRepositoryTest extends AbstractInterationTest {
 
     Map<String, Object> map() {
         return Try.withResources(timeEntryJson::getInputStream)
-                .of(objectMapper.readerFor(type)::<Map<String, Object>> readValue).get();
+                .of(objectMapper.readerFor(type)::<Map<String, Object>>readValue)
+                .get();
     }
 
     @Test
