@@ -1,8 +1,6 @@
 package com.vari.clockify.check.confpr;
 
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 import javax.validation.constraints.NotEmpty;
 

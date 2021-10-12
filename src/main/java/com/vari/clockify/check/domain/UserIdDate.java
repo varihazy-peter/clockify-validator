@@ -34,6 +34,7 @@ public class UserIdDate {
         return daySummaryDate == null || Objects.equals(userIdDate, daySummaryDate) ? Set.of(userIdDate) : Set.of(userIdDate, daySummaryDate);
     }
 
+    @Override
     public String toString() {
         return userId + "-" + this.dateToString();
     }

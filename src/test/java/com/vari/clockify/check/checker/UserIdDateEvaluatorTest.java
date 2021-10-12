@@ -97,7 +97,7 @@ class UserIdDateEvaluatorTest {
         assertThat(userIdDateEvaluation.getUserIdDate()).isEqualTo(this.userIdDate);
         assertThat(userIdDateEvaluation.getDuration()).isNull();
         assertThat(userIdDateEvaluation.getTimeEntryIds()).isEmpty();
-        ;
+
         assertThat(userIdDateEvaluation.getValidatedAt()).isNotNull();
         assertThat(userIdDateEvaluation.getViolations()).isNotNull();
     }
