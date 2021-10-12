@@ -47,7 +47,7 @@ class TimeEntryDaySummaryDAO {
 
     boolean deleteDaySummary(@NonNull UserIdDate userIdDate) {
         log.info("deleteDaySummary by {}", userIdDate);
-        this.daySummaryRepository.deleteById(userIdDate.toString());
+        this.daySummaryRepository.deleteById(userIdDate.toString()).block();
         return true;
     }
 

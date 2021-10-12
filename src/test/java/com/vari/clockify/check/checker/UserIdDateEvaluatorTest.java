@@ -49,7 +49,8 @@ class UserIdDateEvaluatorTest {
     @MockBean
     TimeEntryDaySummaryDAO dao;
     UserIdDate userIdDate = new UserIdDate("5f9ed7381b69c27d1628360b", LocalDate.of(2021, 10, 8));
-    Set<String> timeEntryIs = Set.of("6160239d0908333f1c152a64",
+    Set<String> timeEntryIs = Set.of( //
+            "6160239d0908333f1c152a64",
             "61604a9b7002f4130da635ae",
             "61603aa490029368f0653d2b",
             "616024bc0908333f1c153b63",
